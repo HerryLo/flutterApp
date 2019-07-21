@@ -1,15 +1,15 @@
 import "package:flutter/material.dart";
 
-import '../provider/indexPage.pro.dart';
+//import '../provider/indexPage.pro.dart';
 
 FocusNode focusNode = FocusNode();
 
+// index input Component
 class SearchInputComponent extends StatefulWidget {
   @override
   createState() => new _SearchInputComponentState();
 }
 
-// 查询input 输入框组件
 class _SearchInputComponentState extends State<SearchInputComponent> {
   final TextEditingController _controller = TextEditingController();
 
