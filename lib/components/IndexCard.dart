@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// index card Component
 class CardComponent extends StatelessWidget {
 
   final _wasts = [

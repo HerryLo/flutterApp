@@ -3,7 +3,6 @@ import "package:flutter/material.dart";
 import '../components/IndexSeachInput.dart';
 import '../components/IndexCard.dart';
 
-// index page
 class IndexPage extends StatefulWidget {
 
 //  Map arguments;
@@ -22,7 +21,7 @@ class _IndexPageState extends State<IndexPage> {
 //    this.arguments
 ////  });
 
-  // buidler index Container
+  /// 构建首页容器
   Widget _buildIndexContainer() {
     return new Container(
       color: Color(0xeeeeeeee),
@@ -37,7 +36,6 @@ class _IndexPageState extends State<IndexPage> {
 
   @override
   Widget build(BuildContext context) {
-    // Scaffold
     return Scaffold(
       appBar: AppBar(
         title: Text('垃圾分类助手'),

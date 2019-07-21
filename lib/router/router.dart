@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../pages/IndexPage.dart';
 
-// router path
 final routers = {
   '/': (BuildContext context)=> IndexPage()
 };
 
-
-// router transfer params GenerateMethod
 var onGenerateRoute = (RouteSettings settings) {
   final String name = settings.name;
 
