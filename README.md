@@ -4,7 +4,7 @@ A Flutter mini application.
 
 - [flutter install: Chinese](https://juejin.im/post/5be3d54cf265da611d6624d3)
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [flutter install]:(https://flutter.dev/docs/get-started/install)
+- [flutter install](https://flutter.dev/docs/get-started/install)
 
 ## structure
 
@@ -25,4 +25,4 @@ A Flutter mini application.
 |—— pubspec.yaml
 ```
 
-![]()
+![img](https://raw.githubusercontent.com/HerryLo/flutterApp/master/img/1563713529220.jpg)
