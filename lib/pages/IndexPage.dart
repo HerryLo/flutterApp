@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 
 import '../components/IndexSeachInput.dart';
+import '../components/IndexCard.dart';
 
 class IndexPage extends StatefulWidget {
 
@@ -26,7 +27,8 @@ class _IndexPageState extends State<IndexPage> {
       color: Color(0xeeeeeeee),
       child: new Column(
         children: <Widget>[
-          SearchInputComponent()
+          SearchInputComponent(),
+          CardComponent()
         ],
       )
     );

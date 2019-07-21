@@ -9,6 +9,7 @@ class SearchInputComponent extends StatefulWidget {
   createState() => new _SearchInputComponentState();
 }
 
+// 查询input 输入框组件
 class _SearchInputComponentState extends State<SearchInputComponent> {
   final TextEditingController _controller = TextEditingController();
 
