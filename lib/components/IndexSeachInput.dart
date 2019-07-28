@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
-
-import '../provider/indexPage.pro.dart';
+import "package:provider/provider.dart";
+import '../provider/indexPageProvider.dart';
 
 FocusNode focusNode = FocusNode();
 
@@ -13,8 +13,16 @@ class SearchInputComponent extends StatefulWidget {
 class _SearchInputComponentState extends State<SearchInputComponent> {
   final TextEditingController _controller = TextEditingController();
 
+  String inputValue = '';
+
   Widget _buildInput() {
+    var dataInfo = Provider.of<IndexDataInfo>(context);
     return new TextField(
+      onChanged: (value) {
+        if(_controller.text.isNotEmpty) {
+          dataInfo.setInputValue(value);
+        }
+      },
       focusNode: focusNode,
       controller: _controller,
       textInputAction: TextInputAction.search,
@@ -24,12 +32,19 @@ class _SearchInputComponentState extends State<SearchInputComponent> {
         icon: Icon(
           Icons.search,
         ),
-        suffixIcon: GestureDetector(
-          child: Container(
-            child: Icon(Icons.clear),
+        suffixIcon: _controller.text.isNotEmpty ?
+        GestureDetector(
+          child: Icon(
+            Icons.clear
           ),
-        ),
-      )
+          onTap: () {
+            WidgetsBinding.instance.addPostFrameCallback(
+                    (_) => _controller.clear());
+            dataInfo.clearInputValue('');
+          }
+        ) : null,
+      ),
+      autocorrect: false,
     );
   }
 

@@ -6,9 +6,15 @@ A Flutter mini application.
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [flutter install](https://flutter.dev/docs/get-started/install)
 
+##
+
+* flutter
+* Provider
+* dio
+
 ## structure
 
-```flutter
+```JavaScript
 |—— android
 |—— ios
 |—— assets                  local assets
