@@ -10,16 +10,6 @@ A Flutter mini application.
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [flutter install](https://flutter.dev/docs/get-started/install)
 
-<<<<<<< HEAD
-=======
-## Tec
-
-* flutter
-* Provider
-* dio
-
->>>>>>> e95bae7471a52e8b1abf8bcb8308230b81143e90
-
 ## structure
 
 ```JavaScript
