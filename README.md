@@ -1,16 +1,14 @@
-# flutter_app
+# flutterApp
+
+![](https://img.shields.io/badge/-Flutter-brightgreen)
+![](https://img.shields.io/badge/-Provider-brightgreen)
+![](https://img.shields.io/badge/-dio-brightgreen)
 
 A Flutter mini application.
 
 - [flutter install: Chinese](https://juejin.im/post/5be3d54cf265da611d6624d3)
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [flutter install](https://flutter.dev/docs/get-started/install)
-
-##
-
-* flutter
-* Provider
-* dio
 
 
 ## structure
