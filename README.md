@@ -7,8 +7,8 @@
 A Flutter mini application.
 
 - [flutter install: Chinese](https://juejin.im/post/5be3d54cf265da611d6624d3)
+- [flutter install：English](https://flutter.dev/docs/get-started/install)
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [flutter install](https://flutter.dev/docs/get-started/install)
 
 ## structure
 
