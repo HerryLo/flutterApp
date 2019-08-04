@@ -1,7 +1,11 @@
 import "package:flutter/material.dart";
 
+import "package:provider/provider.dart";
+import '../provider/indexPageProvider.dart';
+
 import '../components/IndexSeachInput.dart';
 import '../components/IndexCard.dart';
+import '../components/IndexListView.dart';
 
 class IndexPage extends StatelessWidget {
 
@@ -12,8 +16,14 @@ class IndexPage extends StatelessWidget {
         child: new Column(
           children: <Widget>[
             SearchInputComponent(),
-            CardComponent()
-          ],
+            Consumer<IndexDataInfo>(builder: (context, provider, _) {
+              if (provider.searchKeywords.length > 0) {
+                return ListViewComponent();
+              } else {
+                return CardComponent();
+              }
+            })
+          ]
         )
     );
   }

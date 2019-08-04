@@ -27,6 +27,7 @@ class IndexDataInfo with ChangeNotifier {
 
   clearInputValue(String v) {
     _inputValue = v;
+    _searchKeywords = [];
     notifyListeners();
   }
 
