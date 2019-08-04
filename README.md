@@ -31,5 +31,3 @@ A Flutter mini application.
 |—— pubspec.lock
 |—— pubspec.yaml
 ```
-
-![img](https://raw.githubusercontent.com/HerryLo/flutterApp/master/img/1563713529220.jpg)
