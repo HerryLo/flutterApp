@@ -1,5 +1,7 @@
 # flutterApp
 
+[🚮🚮Garbage Classification Help Center  WxMiniApp](https://github.com/HerryLo/WxSapp)
+
 ![](https://img.shields.io/badge/-Flutter-brightgreen)
 ![](https://img.shields.io/badge/-Provider-brightgreen)
 ![](https://img.shields.io/badge/-dio-brightgreen)
