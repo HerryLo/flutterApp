@@ -33,6 +33,7 @@ class _ListViewComponentState extends State<ListViewComponent> {
                     ),
                     onTap: () {
                       focusNode.unfocus();
+                      print(dataInfo.searchKeywords[index]);
                       dataInfo.searchWast(dataInfo.searchKeywords[index]);
                     },
                   );
