@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../pages/IndexPage.dart';
 
 final routers = {
-  '/': (BuildContext context)=> IndexPage()
+  '/': (BuildContext context, {arguments})=> IndexPage()
 };
 
 var onGenerateRoute = (RouteSettings settings) {

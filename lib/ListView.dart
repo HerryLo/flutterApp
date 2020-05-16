@@ -6,7 +6,6 @@ class RandomWords extends StatefulWidget {
   createState() => new RandomWordsState();
 }
 
-
 class RandomWordsState extends State<RandomWords> {
   final _suggestions = <WordPair>[];
 

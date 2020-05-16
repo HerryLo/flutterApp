@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
-
-//import 'dart:convert';
-//import 'dart:io';
+import 'dart:convert';
 
 enum KwArr { TargetId, TypeKey, CssName, Name, Note, QueryCount }
 
@@ -23,7 +21,7 @@ class IndexDataInfo with ChangeNotifier {
   get keyWordList => _keyWordList;
 
   // 获取输入的值
-  setInputValue(String v) {
+  void setInputValue(String v) {
     _inputValue = v;
     notifyListeners();
 
@@ -32,30 +30,37 @@ class IndexDataInfo with ChangeNotifier {
     }
   }
 
-  clearInputValue(String v) {
+  // 清理
+  void clearInputValue(String v) {
     _inputValue = v;
     _searchKeywords = [];
     notifyListeners();
   }
 
   // 请求值
-  search(String keywords) async {
-    Response<Map<String, dynamic>> response = await _dio.get(
-        "https://sffc.sh-service.com/wx_miniprogram/sites/feiguan/trashTypes_2/Handler/Handler.ashx?a=GET_KEYWORDS&kw=$keywords");
-    Map<String, dynamic> data = response.data;
-    if (data["kw_list"] != null && data["kw_list"].length > 0 ) {
-      List<dynamic> kwList = data["kw_list"];
-      List<dynamic> kwArr = data["kw_arr"];
-      _searchKeywords = kwList.cast<String>().toList();
-      _keyWordsList = kwArr.cast<Object>().toList();
-      notifyListeners();
+   void search(String keywords) async {
+    try {
+      Response response = await _dio.get(
+          "https://sffc.sh-service.com/wx_miniprogram/sites/feiguan/trashTypes_2/Handler/Handler.ashx?a=GET_KEYWORDS&kw=$keywords");
+      // 序列化json对象
+      final data = json.decode(response.data) as Map<String, dynamic>;
+      if (data["kw_list"] != null && data["kw_list"].length > 0) {
+        List kwList = data["kw_list"];
+        List kwArr = data["kw_arr"];
+        _searchKeywords = kwList.cast<String>().toList();
+        _keyWordsList = kwArr.cast<Object>().toList();
 
-      print(response.data);
+        print(_searchKeywords);
+        print(_keyWordsList);
+        notifyListeners();
+      }
+    }catch(e) {
+      print(e);
     }
   }
 
   // 提取数据
-  searchWast(String name) {
+  void searchWast(String name) {
     for (var item in _keyWordsList) {
       if(item['Name'] == name){
         _keyWordList = item;
