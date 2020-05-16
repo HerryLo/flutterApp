@@ -17,8 +17,7 @@ class IndexPage extends StatelessWidget {
           children: <Widget>[
             SearchInputComponent(),
             Consumer<IndexDataInfo>(builder: (context, provider, _) {
-              print(provider.searchKeywords);
-              if (provider.searchKeywords.length > 0) {
+              if (provider.inputValue != "") {
                 return ListViewComponent();
               } else {
                 return CardComponent();
